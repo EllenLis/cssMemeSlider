@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #2c2727;
+  }
+
+  .slider-body {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 560px;
+  }
