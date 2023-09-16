@@ -125,4 +125,49 @@ body {
     transform: translateX(-300%);
   }
 
+  @media (max-width: 1024px) and (min-width: 768px) {
 
+    body {
+      font-size: 18px;
+    }
+
+    .slider {
+        width: 100%;
+        box-sizing: border-box;
+    }    
+  
+    .slider img {
+      height: 500px;
+      padding: 0 25px 0 0;
+    }
+  
+    .slider-body {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .slides-body .slider {
+        margin: 0;
+        padding: 0;
+    }    
+  
+    .controls label {
+      padding: 5px;
+    }
+  
+    .controls label span {
+      width: 10px;
+      height: 10px;
+      border: 2px solid greenyellow;
+    }
+    
+    .captions {
+      padding: 10px 0;
+    }
+    
+    .slides {
+        overflow-x: hidden;
+    }
+    
+  }
+  
