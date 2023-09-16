@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #2b2929;
+  }
+
+  input {
+    visibility: hidden;
+    margin: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .slider-body {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 560px;
+  }
+
+  .slides {
+    overflow: hidden;
+  }
+
+  .slides-body {
+    display: flex;
+    padding: 25px 0 25px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .slider {
+    display: flex;
+    max-width: 100%;
+  }
+
+  .slider img {
+    min-width: 100%;
+    height: 650px;
+    border-radius: 1px;
+    box-shadow: 0 0 10px grey;
+  }
+
+  .pagin-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .captions {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .captions-body {
+    display: flex;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .caption {
+    display: flex;
+    min-width: 100%;
+  }
+
+  .controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.controls label {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.controls label span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: greenyellow;
+  border: 3px solid greenyellow;
+  border-radius: 20%;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 5px 0 greenyellow;
+}
+
+.slider label:hover span {
+    background-color: white;
+    border-color: white;
+  }
+  
+  #slider-pagination1:checked ~ .pagin-group .controls label:nth-child(1) span,
+  #slider-pagination2:checked ~ .pagin-group .controls label:nth-child(2) span,
+  #slider-pagination3:checked ~ .pagin-group .controls label:nth-child(3) span,
+  #slider-pagination4:checked ~ .pagin-group .controls label:nth-child(4) span {
+    background-color: darkgreen;
+    border-color: greenyellow;
+  }
+
+  #slider-pagination1:hover ~ .pagin-group .controls label:nth-child(1) span,
+  #slider-pagination2:hover ~ .pagin-group .controls label:nth-child(2) span,
+  #slider-pagination3:hover ~ .pagin-group .controls label:nth-child(3) span,
+  #slider-pagination4:hover ~ .pagin-group .controls label:nth-child(4) span {
+    border-color: white;
+  }
+  
+  #slider-pagination1:checked ~ .slides .slides-body,
+  #slider-pagination1:checked ~ .pagin-group .captions .captions-body {
+    transform: translateX(0);
+  }
+
+  #slider-pagination2:checked ~ .slides .slides-body,
+  #slider-pagination2:checked ~ .pagin-group .captions .captions-body {
+    transform: translateX(-100%);
+  }
+
+  #slider-pagination3:checked ~ .slides .slides-body,
+  #slider-pagination3:checked ~ .pagin-group .captions .captions-body {
+    transform: translateX(-200%);
+  }
+
+  #slider-pagination4:checked ~ .slides .slides-body,
+  #slider-pagination4:checked ~ .pagin-group .captions .captions-body {
+    transform: translateX(-300%);
+  }
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+
+    body {
+      font-size: 18px;
+    }
+
+    .slider {
+        width: 100%;
+        box-sizing: border-box;
+    }    
+  
+    .slider img {
+      height: 500px;
+      padding: 0 25px 0 0;
+    }
+  
+    .slider-body {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .slides-body .slider {
+        margin: 0;
+        padding: 0;
+    }    
+  
+    .controls label {
+      padding: 5px;
+    }
+  
+    .controls label span {
+      width: 10px;
+      height: 10px;
+      border: 2px solid greenyellow;
+    }
+    
+    .captions {
+      padding: 10px 0;
+    }
+    
+    .slides {
+        overflow-x: hidden;
+    }
+    
+  }
+  
